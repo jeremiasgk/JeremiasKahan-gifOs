@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/css index/home.css">
+    <script src="./javascript/index.js"></script>
+    <link rel="icon" href="./assets/globe_img.png">
+    <title>gifOS - Awesome Gifs</title>
+</head>
+<body>
+    <div class="temaWrapper" id="tema_wrapper">
+        <header>
+            <div class="titlebar--shadowbox" id="welcome">
+                <p class="titlebar--shadowbox__text">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+            </div>
+            <nav>
+                <img class="logo" id="logo" src="./assets/gifOF_logo.png" alt="Logo gif.OS">
+                <div class="buttonDefault" id="crear_guifos"><a href="./html/gif_recorder.html">Crear Guifos</a></div>
+                <div class="themeButton">
+                    <button class="themeButton__buttonDefault--elegir" id="elegir_tema"><p>Elegir Tema</p></button>
+                    <button class="themeButton__buttonDefault--arrow" id="dropdown_theme"><img src="./assets/dropdown.svg" alt="menu desplegable"></button>
+                </div>
+                <div class="dayNight" id="day_night">
+                    <button class="dayNight__change" id="day_button"><p><span>S</span>ailor Day</p></button>
+                    <button class="dayNight__change" id="night_button"><p><span>S</span>ailor Night</p></button>
+                </div>
+                <a href="./html/gif_recorder.html"><span class="underline">M</span>is Guifos</a>
+                <div class="searchFrame">
+                    <div class="searchFrame__titlebar">
+                        <p class="searchFrame__titlebar__text">Buscar</p>
+                    </div>
+                    <div class="searchFrame__search">
+                        <input type="text" class="searchFrame__search__textfield" id="search_bar" placeholder="Busca gifs, hashtags, temas, busca lo que quieras…">
+                        <button class="searchFrame__search__button" id="searchbutton"><img id="icono_lupa" src="assets/lupa_inactive.svg" alt="Lupa de busqueda"><span id="search__button__text">Buscar</span></button>
+                    </div>
+                    <div class="desplegable" id="desplegableSugerencias"></div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class="sugerencias">
+                <div class="sugerencias__textfieldTitle">
+                    <p>Hoy te sugerimos:</p>
+                </div>
+                <div class="sugerenciasGif">
+                    <div class="sugerenciasGif__frame" id="sugerencia_1">
+                        <div class="sugerenciasGif__frame__titlebar">
+                            <p>#Alf</p>
+                            <img src="./assets/button3.svg" alt="boton cerrar">
+                        </div>
+                        <div class="sugerenciasGif__frame__container">
+                            <img src="./assets/alf.gif" alt="gif de sugerencia">
+                            <button class="sugerenciasGif__frame__container__boton" id="ver1"><p>Ver más...</p></button> 
+                        </div>
+                    </div>
+
+                    <div class="sugerenciasGif__frame" id="sugerencia_2">
+                        <div class="sugerenciasGif__frame__titlebar">
+                            <p>#Monty Python</p>
+                            <img src="./assets/button3.svg" alt="boton cerrar">
+                        </div>
+                        <div class="sugerenciasGif__frame__container">
+                            <img src="./assets/monty_python.gif" alt="gif de sugerencia">
+                            <button class="sugerenciasGif__frame__container__boton" id="ver2"><p>Ver más...</p></button> 
+                        </div>
+                    </div>
+
+                    <div class="sugerenciasGif__frame" id="sugerencia_3">
+                        <div class="sugerenciasGif__frame__titlebar">
+                            <p>#Dr Zaius</p>
+                            <img src="./assets/button3.svg" alt="boton cerrar">
+                        </div>
+                        <div class="sugerenciasGif__frame__container">
+                            <img src="./assets/drzaius.gif" alt="gif de sugerencia">
+                            <button class="sugerenciasGif__frame__container__boton" id="ver3"><p>Ver más...</p></button> 
+                        </div>
+                    </div>
+
+                    <div class="sugerenciasGif__frame" id="sugerencia_4">
+                        <div class="sugerenciasGif__frame__titlebar">
+                            <p>#Power Rangers</p>
+                            <img src="./assets/button3.svg" alt="boton cerrar">
+                        </div>
+                        <div class="sugerenciasGif__frame__container">
+                            <img src="./assets/power_rangers.gif" alt="gif de sugerencia">
+                            <button class="sugerenciasGif__frame__container__boton" id="ver4"><p>Ver más...</p></button> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tendencias">
+                <div class="tendencias__textfieldTitle" id="tendencias_title">
+                    <p id="tendencias_title_text">Tendencias:</p>
+                </div>
+                <div class="tendenciasGif" id="gif_tendencias">
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

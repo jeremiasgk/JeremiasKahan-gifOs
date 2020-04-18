@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/recorder/gif_recorder.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js" type="text/javascript"></script>
+    <script src="../javascript/gif_recorder.js"></script>
+    <link rel="icon" href="../assets/globe_img.png">
+    <title>gifOS - Awesome Gifs</title>
+</head>
+<body>
+    <div class="temaWrapper" id="tema_wrapper">
+        <header>
+            <div class="titlebar--shadowbox" id="welcome">
+                <p class="titlebar--shadowbox__text">¡Bienvenidos/as a Guifos.com! ——————Donde los gifs están.////// Número de visitas: 12.765.803</p>
+            </div>
+            <nav>
+                <a href="../index.html" class="atras" id="atras"><img src="../assets/arrow.svg" alt="volver atrás" class="atras"></a>
+                <a class="linkLogo" href="../index.html"><img class="logo" id="logo" src="../assets/gifOF_logo.png" alt="Logo gif.OS"></a>
+                <div class="buttonDefault" id="crear_guifos"><a href="../html/gif_recorder.html">Crear Guifos</a></div>
+                <div class="themeButton">
+                    <button class="themeButton__buttonDefault--elegir" id="elegir_tema"><p>Elegir Tema</p></button>
+                    <button class="themeButton__buttonDefault--arrow" id="dropdown_theme"><img src="../assets/dropdown.svg" alt="menu desplegable"></button>
+                </div>
+                <div class="dayNight" id="day_night">
+                    <button class="dayNight__change" id="day_button"><p><span>S</span>ailor Day</p></button>
+                    <button class="dayNight__change" id="night_button"><p><span>S</span>ailor Night</p></button>
+                </div>
+                <a class="misGuifosLink" href="./gif_recorder.html"><span class="underline">M</span>is Guifos</a>
+            </nav>
+        </header>
+        <main>
+            <section class="crearGuifos">
+                <div class="window" id="window">
+                    <div class="window__titlebar">
+                        <p><span>Crear Guifos</span></p>
+                    </div>
+                    <div class="window__container">
+                        <div class="window__container__icontitle">
+                            <img src="../assets/window_img.png" alt="icono de ventana">
+                            <p><span>Aquí podrás crear tus propios guifos</span></p>
+                        </div>
+                        <div class="window__container__parrafo">
+                            <p class="instructions">Crear tu <span>guifo</span> es muy fácil, graba cualquier imagen con tu cámara y obtén guifos personalizados.<br>
+                                Los pasos para crear tu guifo son:<br><br>
+                                <span>1)</span> Dar permisos de acceso a la cámara (sólo por el tiempo de uso) <br>
+                                <span>2)</span> Capturar tu momento guifo <br>
+                                <span>3)</span> Revisar el momento <br>
+                                <span>4)</span> Listo para subir y compartir! <br>
+                                ¿Quieres comenzar a crear tu <span>guifo</span> ahora?</p>
+                        </div>
+                        <div class="window__container__botones">
+                            <div class="window__container__botones__button--div" id="cancelar"><a href="../index.html"><p>Cancelar</p></a></div>
+                            <button class="window__container__botones__button" id="comenzar"><p>Comenzar</p></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="windowDisplay" id="windowDisplay">
+                    <div class="windowDisplay__titlebar">
+                        <p><span id="recordMessage"></span></p>
+                        <a href=""><img src="../assets/button_close.svg" alt="boton cerrar" id="windowDisplay__titlebar__cerrar"></a>
+                    </div>
+                    <div class="windowDisplay__container" id="windowDisplay__container">
+                        <video src="" id="video"></video>
+                    </div>
+
+                    <div class="windowDisplay__container" id="windowDisplay__container--loop">
+                    </div>
+
+                    <div class="windowDisplay__botones" id="windowDisplay__botones">
+                        <button class="windowDisplay__botones__cam"><img src="../assets/camera.svg" alt=""></button>
+                        <button class="windowDisplay__botones__grabar" id="windowDisplay__botones__grabar"><p>Capturar</p></button>
+                    </div>
+                    
+                    <div class="windowDisplay__botones" id="windowDisplay__botones--grabar">
+                        <button class="windowDisplay__botones__grabando"><img src="../assets/recording.svg" alt=""></button>
+                        <button class="windowDisplay__botones__parar" id="windowDisplay__botones__parar"><p>Listo</p></button>
+                    </div>
+                    
+                    <div class="windowDisplay__botones" id="windowDisplay__botones--listo">
+                        <button class="windowDisplay__botones__repetir" id="windowDisplay__botones__repetir"><p>Repetir Captura</p></button>
+                        <button class="windowDisplay__botones__subir" id="windowDisplay__botones__subir"><p>Subir Guifo</p></button>
+                    </div>
+                </div>
+                
+                <div class="windowExito" id="windowExito">
+                    <div class="windowExito__titlebar">
+                        <p><span id="recordMessage2">Guifo subido con Éxito</span></p>
+                        <img src="../assets/button_close.svg" alt="boton cerrar" id="windowDisplay__titlebar__cerrar">
+                    </div>
+                    <div class="windowExito__container" id="windowExito__container">
+                        <div class="windowExito__container__imagen" id="windowExito__container__imagen">
+                        </div>
+                        <div class="windowExito__container__content">
+                            <p><span>Guifo creado con exito</span></p>
+                            <button class="windowExito__container__boton" id="copiar_enlace"><p>Copiar enlace Guifo</p></button>
+                            <button class="windowExito__container__boton" id="descargar_guifo"><p>Descargar Guifo</p></button>
+                        </div>
+                    </div>
+                    <div class="windowExito__botones" id="windowExito__botones">
+                        <a href="gif_recorder.html"><span class="windowDisplay__botones__subir" id="windowExito__botones__listo"><p>Listo</p></span></a>
+                    </div>
+                </div>
+            </section>
+            <section class="misGuifos">
+                <div class="misGuifos__textfieldTitle">
+                    <p>Mis Guifos</p>
+                </div>
+                <div class="guifosWrapper" id="guifosWrapper">
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
