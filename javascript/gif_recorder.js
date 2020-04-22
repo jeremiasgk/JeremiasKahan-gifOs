@@ -219,7 +219,7 @@ function subirGif(archivo){
 }
 
 function mostrarGifsCreados() {
-    let gifsArray = JSON.parse(localStorage.getItem('gifsCreados'));
+    let gifsArray = JSON.parse(localStorage.getItem('gifsCreados')) || [];
 
     gifsArray.forEach((gif) => {
         let guifosWrapper = document.getElementById('guifosWrapper');
